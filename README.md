@@ -8,45 +8,51 @@ Proyek ini dibuat untuk ujian tengah semester, tujuannya adalah bergerak ke titi
 
 # cara kerja
 ## Buat Folder Workspace
-bash
+```bash
 mkdir -p Winner/src
 cd Winner/src
-
+```
 ## Instal package dan dependencies
-bash
+'''bash
 cd ../ && rosdep install --from-paths src --ignore-src -r -y
 
 ## Build Package
-bash
+```bash
 colcon build
+```
 
 ## sambungkan pc dan turtlebot (Via Ethernet)
-bash
+```bash
 ssh ubuntu@192.168.185.3
+```
 
 ## Melakukan Mapping
-bash
+```bash
 ros2 launch turtlebot4_navigation slam.launch.py
 ros2 launch turtlebot4_viz view_robot.launch.py
+```
 
 # Menjalankan Nav2
 ## menjalankan Lokalization
-bash
+```bash
 source install/setup.bash
-
 ros2 launch winner1 localization.launch.py
+```
 
 ## menjalankan Navigation
-bash
+```bash
 source install/setup.bash
 ros2 launch winner1 uts_nav.launch.py
+```
 
 ## menjalankan Rvis
-bash
+```bash
 ros2 launch turtlebot4_viz view_robot.launch.py
+```
 
 ## menjalankan program goal point ke point
-bash
+```bash
 source install/setup.bash
 ros2 run winner1 winner1
+```
 
