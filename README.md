@@ -13,8 +13,9 @@ mkdir -p Winner/src
 cd Winner/src
 ```
 ## Instal package dan dependencies
-'''bash
+```bash
 cd ../ && rosdep install --from-paths src --ignore-src -r -y
+```
 
 ## Build Package
 ```bash
