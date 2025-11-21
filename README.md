@@ -22,7 +22,7 @@ cd ../ && rosdep install --from-paths src --ignore-src -r -y
 colcon build
 ```
 
-## sambungkan pc dan turtlebot (Via Ethernet)
+## Sambungkan pc dan turtlebot (Via Ethernet)
 ```bash
 ssh ubuntu@192.168.185.3
 ```
@@ -40,18 +40,18 @@ source install/setup.bash
 ros2 launch winner1 localization.launch.py
 ```
 
-## menjalankan Navigation
+## Menjalankan Navigation
 ```bash
 source install/setup.bash
 ros2 launch winner1 uts_nav.launch.py
 ```
 
-## menjalankan Rvis
+## Menjalankan Rvis
 ```bash
 ros2 launch turtlebot4_viz view_robot.launch.py
 ```
 
-## menjalankan program goal point ke point
+## Menjalankan program goal point ke point
 ```bash
 source install/setup.bash
 ros2 run winner1 winner1
